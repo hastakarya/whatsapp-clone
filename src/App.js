@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import LeftHeader from "./components/ProfileHeader";
+import SearchBar from "./components/SearchBar";
+import Card from "./components/Card";
+import RightBar from "./components/chat/RightBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex flex-row">
+      <div className="w-1/3 h-screen border-r-2">
+        <LeftHeader/>
+        <SearchBar/>
+        <Card/>
+      </div>
+
+      <div className="w-full h-screen">
+        <RightBar/>
+      </div>
     </div>
   );
 }
